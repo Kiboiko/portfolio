@@ -53,7 +53,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+html { scroll-padding-top: var(--nav-height); }
 body { margin: 0; background: var(--p-bg); color: var(--p-ink); font: 1rem/1.6 var(--font-text); }
 img { display: block; max-width: 100%; }
 h1, h2, h3, p, dl, dd, figure { margin: 0; }
@@ -66,7 +66,7 @@ a { color: inherit; }
 *:focus-visible { outline: 2px solid var(--p-accent); outline-offset: 5px; }
 main:focus-visible { outline-offset: -2px; }
 .wrap { width: min(calc(100% - var(--side) * 2), 1240px); margin-inline: auto; }
-.skip-link { position: fixed; z-index: 3; top: 10px; left: 16px; padding: 10px 16px; background: var(--paper); transform: translateY(-150%); }
+.skip-link { position: fixed; z-index: 3; top: 10px; left: max(var(--side), calc((100% - 1240px) / 2)); padding: 10px 16px; background: var(--paper); transform: translateY(-150%); }
 .skip-link:focus { transform: translateY(0); }
 
 .site-header { position: fixed; z-index: 2; top: 0; inset-inline: 0; min-height: var(--nav-height); background: var(--p-bg); border-bottom: 1px solid var(--line); }
@@ -180,9 +180,10 @@ main:focus-visible { outline-offset: -2px; }
   .bar-row::after { height: 6px; }
   .hero-meta { margin-top: 20px; padding-block: 13px; font-size: .75rem; align-self: end; flex-wrap: wrap; gap: 5px 12px; }
   .hero-meta span:last-child { gap: 6px; }
-  .section { padding-block: 55px; min-height: auto; }
+  .section { padding-block: 52px; min-height: auto; }
   .section-head { flex-wrap: wrap; align-items: center; }
-  .project-grid { grid-template-columns: 1fr; gap: 20px; }
+  .project-grid { grid-template-columns: 1fr; gap: 18px; }
+  .project-art { aspect-ratio: 1.9; }
   .project-body { padding: 18px; gap: 10px; }
   .project-body .stack { padding-top: 3px; }
   .experience-grid { grid-template-columns: 1fr; }
@@ -198,6 +199,5 @@ main:focus-visible { outline-offset: -2px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
   .project-art:hover img { transform: none; }
 }
