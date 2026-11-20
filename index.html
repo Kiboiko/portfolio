@@ -26,9 +26,9 @@
 </head>
 <body id="top">
   <!-- Service portfolio: split hero, plaster rose, split nav, tonal buttons, dark footer, word-highlight. -->
-  <a class="skip-link" href="#main">К содержанию</a>
-  <header class="site-header">
-    <nav class="wrap nav nav--split" aria-label="Навигация">
+  <header class="site-header nav">
+    <a class="skip-link" href="#main">К содержанию</a>
+    <nav class="wrap nav-layout nav--split" aria-label="Навигация">
       <a class="brand" href="#top" aria-label="Кирилл Бойко, в начало">
         <img src="assets/mark.svg" width="36" height="36" alt="">
         <span>Кирилл Бойко</span>
@@ -38,7 +38,7 @@
         <a href="#experience">Опыт</a>
         <a href="#contact">Контакты</a>
       </div>
-      <a class="btn btn--secondary nav-contact" href="https://t.me/chirillkin">Написать в Telegram</a>
+      <a class="btn btn--primary nav-contact" href="https://t.me/chirillkin">Написать в Telegram</a>
     </nav>
   </header>
 
@@ -54,10 +54,10 @@
             <a class="btn btn--secondary" href="resume.pdf" download="Kirill-Boiko-resume.pdf">Скачать резюме</a>
           </div>
         </div>
-        <div class="hero__visual" data-visual>
+        <div class="hero__visual hero-visual" data-visual>
           <figure class="chart" aria-labelledby="chart-title chart-caption">
             <p class="chart-overline">Из проекта Olist</p>
-            <h2 id="chart-title">Доставка и оценки</h2>
+            <p id="chart-title">Доставка и оценки</p>
             <p id="chart-caption">Доля оценок 1–2 среди заказов с отзывом</p>
             <dl class="bars">
               <div class="bar-row" style="--value:9.25%; --bar:#c9929b">
@@ -167,7 +167,7 @@
     </section>
   </main>
 
-  <footer id="contact" class="section contact" aria-labelledby="contact-title">
+  <footer id="contact" class="section closing contact" aria-labelledby="contact-title">
     <div class="wrap contact-layout">
       <div data-moment="word-highlight">
         <h2 id="contact-title" class="mo-wh__text">Ищу стажировку или junior-позицию <strong>в аналитике данных</strong></h2>
